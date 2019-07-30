@@ -1,21 +1,16 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { ApiService, PaginationApiService } from './services';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+import { UsersService } from './services/users.service';
 
 @NgModule({
   imports: [
-    HttpModule
+    CommonModule,
+    HttpClientModule
   ],
+  providers: [
+    UsersService
+  ]
 })
-export class CoreModule {
-  static forRoot(): ModuleWithProviders {
-    console.log('CoreModule created');
-    return {
-      ngModule: CoreModule,
-      providers: [
-        ApiService,
-        PaginationApiService
-      ]
-    }
-  }
-}
+export class CoreModule {}

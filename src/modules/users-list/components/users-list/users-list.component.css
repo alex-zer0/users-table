@@ -1,0 +1,13 @@
+.users-list .mat-table {
+  width: 100%;
+}
+
+.users-list .mat-header-cell,
+.users-list .mat-cell {
+  padding: .75rem;
+}
+
+.users-list .mat-row .mat-column-first_name {
+  color: darkblue;
+  cursor: pointer;
+}

@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoreModule } from '../modules/core';
-import { UsersListModule } from '../modules/users-list';
 import { AppRoutingModule } from './app-routing.module';
+import { UsersListModule } from '../modules/users-list';
+import { CoreModule } from '../modules/core/core.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CoreModule.forRoot(),
+    CoreModule,
     RouterModule,
     AppRoutingModule,
     UsersListModule,
